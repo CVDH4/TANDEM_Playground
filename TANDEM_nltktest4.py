@@ -9,6 +9,7 @@ DH Praxis 14-15 CUNY Graduate Center
 __author__ = 'sbr-cv'
 
 import csv
+import os
 
 print
 print 'Welcome to TANDEM 0.05 - Playing with NLTK'
@@ -44,7 +45,6 @@ to a variable
 print "Files in Corpus"
 print
 
-import os
 
 corpus_files = os.listdir(corpus_root)
 
