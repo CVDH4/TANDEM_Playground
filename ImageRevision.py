@@ -26,15 +26,15 @@ def get_input_folder():
     else:
         print ("Folder does not exist!")
         
-#Feature Extraction
+#Feature Extraction Grunt Work
 def image_extract(file):
-	input_image = Image.open(file)
-	image_output = input_image.shape and input_image.size
+	image_input = cv2.imread(file)
+	image_output = image_input.shape
 	return image_output
 	
 # Run Feature Extraction
 def feature_extract(file):
-	print ("Feature Extraction: " + file(
+	print ("Feature Extraction: " + file)
 	fullpath = infolder + file
 	ofile = os.path.splitext(file)[0]
 	outfile = infolder + outfolder + '/' + ofile + '.csv'
@@ -62,7 +62,7 @@ while good_input == False:
     infolder = get_input_folder()
 
 #create the output folder
-outfolder = make_features_folder(infolder)
+outfolder = make_feature_folder(infolder)
 
 #loop through the user's input folder and find image files
 #for testing purposes only work with PNG files now
