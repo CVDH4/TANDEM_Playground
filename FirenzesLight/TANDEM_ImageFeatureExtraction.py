@@ -29,13 +29,18 @@ print img.shape
 print
 print "Number of pixels:"
 print img.size
+print
+print "Number of pixels:"
+print img.dtype
+print
+
 
 '''
 Color mean as per py image search
 '''
 
 print
-print "RGB:"
+print "Mean RGB:"
 
 means = cv2.mean(img)
 print means
@@ -45,7 +50,12 @@ Color mean and standard deviation of each channel
 '''
 
 print
-print "Color Mean and Std Dev:"
+print "Color Mean:"
+
+(means) = cv2.meanStdDev(img)
+
+print
+print "Std Dev of Color Mean (means, stds):"
 
 (means, stds) = cv2.meanStdDev(img)
 
